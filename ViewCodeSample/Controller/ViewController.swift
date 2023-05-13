@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         answersLabel.font = UIFont.systemFont(ofSize: 24)
         answersLabel.text = "ANSWERS"
         answersLabel.numberOfLines = 0
+        answersLabel.textAlignment = .right
         view.addSubview(answersLabel)
         
         // 📍 Current Answer
@@ -50,7 +51,6 @@ class ViewController: UIViewController {
         currentAnswer.placeholder = "Tap letter to guess"
         currentAnswer.textAlignment = .center
         currentAnswer.font = UIFont.systemFont(ofSize: 44)
-//        currentAnswer.isUserInteractionEnabled = false
         view.addSubview(currentAnswer)
         
         // constraints activation
