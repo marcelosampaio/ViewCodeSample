@@ -53,6 +53,18 @@ class ViewController: UIViewController {
         currentAnswer.font = UIFont.systemFont(ofSize: 44)
         view.addSubview(currentAnswer)
         
+        // 📍 Submit Button
+        let submit = UIButton(type: .system)
+        submit.translatesAutoresizingMaskIntoConstraints = false
+        submit.setTitle("SUBMIT", for: .normal)
+        view.addSubview(submit)
+        
+        // 📍 Clear Button
+        let clear = UIButton(type: .system)
+        clear.translatesAutoresizingMaskIntoConstraints = false
+        clear.setTitle("CLEAR", for: .normal)
+        view.addSubview(clear)
+        
         // constraints activation
         NSLayoutConstraint.activate([
             // 📍 Score
@@ -73,7 +85,17 @@ class ViewController: UIViewController {
             // 📍 Current Answer
             currentAnswer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             currentAnswer.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.5),
-            currentAnswer.topAnchor.constraint(equalTo: answersLabel.bottomAnchor, constant: 20)
+            currentAnswer.topAnchor.constraint(equalTo: answersLabel.bottomAnchor, constant: 20),
+            
+            // 📍 Submit Button
+            submit.topAnchor.constraint(equalTo: currentAnswer.bottomAnchor),
+            submit.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -100),
+            submit.heightAnchor.constraint(equalToConstant: 44),
+            
+            // 📍 Clear Button
+            clear.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 100),
+            clear.centerYAnchor.constraint(equalTo: submit.centerYAnchor),
+            clear.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
     
