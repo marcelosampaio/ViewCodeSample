@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func loadView() {
         print("load view")
-        // 📍 Score
+        // 📍 View
         view = UIView()
         view.backgroundColor = .white
         
